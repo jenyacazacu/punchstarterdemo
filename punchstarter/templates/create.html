@@ -1,0 +1,44 @@
+ {% extends "base.html" %}
+
+ {% set active_page='create' %}
+
+ {% block subtitle %}
+  Create New Project
+ {% endblock subtitle %}
+
+ {% block content %}
+
+ <div>
+    <h1 class="text-center"> Create a Project </h1>
+      <form method="POST" action="{{ url_for('create') }}" enctype="multipart/form-data" >
+            <div class="form-group">
+              <label for="project_name">Project Name</label>
+              <input type="text" class="form-control" id="project_name" name="project_name">
+            </div>
+            <div class="form-group">
+              <label for="short_description">Short Description</label>
+              <textarea class="form-control" id="short_description" name="short_description" rows="3" ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="long_description">Long Description</label>
+              <textarea class="form-control" id="long_description" name="long_description" rows="5" ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="cover_image" class="col-sm-2 control-label">Cover Photo</label>
+                <div>
+                  <input type="file" class="form-control" id="cover_image" name="cover_image">
+               </div>
+            </div>    
+            <div class="form-group">
+              <label for="funding_goal">Funding Goal</label>
+              <input type="number" class="form-control" id="funding_goal" name="funding_goal">
+            </div>
+             <div class="form-group">
+              <label for="funding_end_date">Funding End Date</label>
+              <input type="date" class="form-control" id="funding_end_date" name="funding_end_date">
+            </div>  
+            <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div> 
+
+{% endblock content %} 

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% set active_page='index' %}
+  
+  {% block subtitle %}
+    Crowdfunnding Made Simple
+  {% endblock subtitle %}
+
+  {% block content %}
+  <div class="jumbotron">
+    <h1>Crowdfunding made simple!</h1>
+    <p>This is a template showcasing the flask framework </p>
+  </div>
+
+  <h2>New Projects</h2>
+	  {% include '_projects.html' %}
+  {% endblock content %}
